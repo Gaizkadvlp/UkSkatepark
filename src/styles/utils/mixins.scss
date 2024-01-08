@@ -1,56 +1,59 @@
 @mixin card {
-    color: white;
-    background-color: $color-third;
+  color: white;
+  background-color: $color-third;
 
-    display: flex;
-    margin: auto;
+  display: flex;
+  margin: auto;
 
-    border-style: double;
-    border-radius: 1em;
-    
-    min-width: 30%;
-    padding: 1em;
-    margin: 2em;
+  border-style: double;
+  border-radius: 1em;
 
-    overflow: hidden;
+  min-width: 30%;
+  padding: 1em;
+  margin: 2em;
 
-    //flex: 1 20%;
-    text-align: center;
-    flex-direction: column;
-    border-style:double;
-    border-radius: 0.5em;
-    margin: 1em;
-    box-shadow: 5px 5px 10px;
-    word-wrap: break-word;
-    overflow: hidden;
+  overflow: hidden;
 
-    & p {
-        margin-bottom: 1em;
-    }
-    & button {
-        margin: 1em 0em 1em 0em;
-    }
-    & input {
-        margin-bottom: 1em;
-    }
+  //flex: 1 20%;
+  text-align: center;
+  flex-direction: column;
+  border-style: double;
+  border-radius: 0.5em;
+  margin: 1em;
+  box-shadow: 5px 5px 10px;
+  word-wrap: break-word;
+  overflow: hidden;
 
-    @media (max-width:900px) {
-        min-width: 40%;
-    }
-    @media (max-width: 500px) {
-        min-width: 70%;
-    }
+  & p {
+    margin-bottom: 1em;
+  }
+
+  & button {
+    margin: 1em 0em 1em 0em;
+  }
+
+  & input {
+    margin-bottom: 1em;
+  }
+
+  @media (max-width:900px) {
+    min-width: 40%;
+  }
+
+  @media (max-width: 500px) {
+    min-width: 70%;
+  }
 }
 
 @mixin container {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 @mixin button {
-  
+
   background-image: linear-gradient(#42A1EC, #0070C9);
   border: 1px solid #0077CC;
   border-radius: 4px;
@@ -59,7 +62,7 @@
   cursor: pointer;
   direction: ltr;
   display: inline-block;
-  font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 17px;
   font-weight: 400;
   letter-spacing: -.022em;
@@ -75,4 +78,33 @@
   white-space: nowrap;
 
   margin: 0em 1em 0em 1em;
+}
+
+@mixin button2 {
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+
+  button:hover {
+    border-color: #646cff;
+  }
+
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+@mixin movil {
+  @media only screen and (max-width: 450px) {
+    @content
+  }
 }

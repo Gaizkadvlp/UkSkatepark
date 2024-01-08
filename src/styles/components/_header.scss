@@ -1,16 +1,40 @@
 header {
-    overflow: hidden;
-    p {
-        font-size: 3em;
-        display: inline;
-        margin-left: 2em;
-        color: red;
-    }
-}
+  // overflow: hidden;
+  // font-size: 3.2em;
+  width: 100%;
+  overflow: hidden;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(../../assets/uk_pista.png);
+  background-size: 100%;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  @include movil {
+    justify-content: space-around;
+    font-size: 3em;
+  }
 
-#logo {
+  h1 {
+    font-size: 3em;
+    // display: inline;
+    margin-left: 2em;
+    margin-right: 1em;
+    color: red;
+
+    @include movil {
+      color: green;
+      font-size: 0.8em;
+      overflow: hidden;
+      margin: 0;
+    }
+  }
+
+  #logo {
     width: 20vh;
     height: auto;
     margin: 0;
     float: left;
+  }
 }
